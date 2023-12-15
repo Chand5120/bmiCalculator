@@ -11,6 +11,7 @@ let exitBtn = document.querySelector(".exitButton");
 
 let bmi;
 btnSubmit.addEventListener("click", function() {
+    bmi = ((+weight.value /  Number((height.value ** 2))) * 10000).toFixed(1);
     // document.querySelector(".result").textContent = `Your BMI value is ${bmi}`;ss
     outerSection.classList.toggle("hidden");
     modal.classList.toggle("hidden");
@@ -18,7 +19,6 @@ btnSubmit.addEventListener("click", function() {
 });
 
 exitBtn.addEventListener("click", function() {
-    bmi = ((+weight.value /  Number((height.value ** 2))) * 10000).toFixed(1);
     outerSection.classList.toggle("hidden");
     modal.classList.toggle("hidden");
 });
